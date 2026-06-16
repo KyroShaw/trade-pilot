@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/martinshaw/workspace/trade-pilot/.claude/rules)"
+    ],
+    "additionalDirectories": [
+      "/Users/martinshaw/workspace/trade-pilot/.claude"
+    ]
+  }
+}

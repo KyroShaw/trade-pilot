@@ -1,0 +1,24 @@
+{
+  "name": "@trade-pilot/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@trade-pilot/db": "workspace:*",
+    "@trade-pilot/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@trade-pilot/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
