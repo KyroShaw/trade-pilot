@@ -14,6 +14,7 @@
     "@trade-pilot/auth": "workspace:*",
     "@trade-pilot/db": "workspace:*",
     "@trade-pilot/env": "workspace:*",
+    "@trade-pilot/llm": "workspace:*",
     "@trpc/client": "catalog:",
     "@trpc/server": "catalog:",
     "@types/pg": "catalog:",

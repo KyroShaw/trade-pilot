@@ -1,10 +1,30 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir -p /Users/martinshaw/workspace/trade-pilot/.claude/rules)"
+      "Bash(mkdir -p /Users/martinshaw/workspace/trade-pilot/.claude/rules)",
+      "Bash(xargs cat)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm add *)",
+      "Bash(pnpm dlx *)",
+      "Bash(pnpm exec *)",
+      "Bash(pnpm check-types *)",
+      "Bash(pnpm db:push)",
+      "Bash(pnpm drizzle-kit *)",
+      "Bash(psql postgresql://postgres:password@localhost:5432/postgres -c \"SELECT 1;\")",
+      "Bash(pnpm db:seed)",
+      "Bash(psql -U martinshaw -d postgres -c \"SELECT symbol, name, binance_pair FROM alpha_projects ORDER BY symbol;\")",
+      "Bash(psql -U martinshaw -d postgres -c \"\\\\dt\")",
+      "Bash(node -e \"const crypto = require\\('crypto'\\); console.log\\(crypto.randomBytes\\(32\\).toString\\('hex'\\)\\);\")",
+      "Bash(pnpm check *)",
+      "Bash(psql -d postgres -c \"\\\\dt\")",
+      "Bash(psql -d postgres -c \"\\\\d user_exchange_keys\")",
+      "Bash(node --env-file=/Users/martinshaw/workspace/trade-pilot/apps/server/.env -e ' *)",
+      "Bash(git commit -m ' *)",
+      "Bash(pnpm fix *)",
+      "Bash(pnpm test *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git add *)"
     ],
-    "additionalDirectories": [
-      "/Users/martinshaw/workspace/trade-pilot/.claude"
-    ]
+    "additionalDirectories": ["/Users/martinshaw/workspace/trade-pilot/.claude"]
   }
 }

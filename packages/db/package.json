@@ -13,7 +13,8 @@
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "tsx --env-file=../../apps/server/.env src/seed.ts"
   },
   "dependencies": {
     "@trade-pilot/env": "workspace:*",
@@ -26,6 +27,7 @@
     "@trade-pilot/config": "workspace:*",
     "@types/pg": "catalog:",
     "drizzle-kit": "^0.31.8",
+    "tsx": "^4.22.4",
     "typescript": "catalog:"
   }
 }

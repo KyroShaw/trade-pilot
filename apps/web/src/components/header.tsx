@@ -4,30 +4,32 @@ import { ModeToggle } from "./mode-toggle";
 import UserMenu from "./user-menu";
 
 export default function Header() {
-  const links = [
-    { to: "/", label: "Home" },
-    { to: "/dashboard", label: "Dashboard" },
-    { to: "/todos", label: "Todos" },
-  ] as const;
+	const links = [
+		{ to: "/", label: "Home" },
+		{ to: "/market-research", label: "行情调研" },
+		{ to: "/alpha-dca", label: "Alpha 定投" },
+		{ to: "/orders", label: "订单" },
+		{ to: "/profit-curve", label: "资金曲线" },
+		{ to: "/todos", label: "Todos" },
+		{ to: "/settings", label: "设置" },
+	] as const;
 
-  return (
-    <div>
-      <div className="flex flex-row items-center justify-between px-2 py-1">
-        <nav className="flex gap-4 text-lg">
-          {links.map(({ to, label }) => {
-            return (
-              <Link key={to} to={to}>
-                {label}
-              </Link>
-            );
-          })}
-        </nav>
-        <div className="flex items-center gap-2">
-          <ModeToggle />
-          <UserMenu />
-        </div>
-      </div>
-      <hr />
-    </div>
-  );
+	return (
+		<div>
+			<div className="flex flex-row items-center justify-between px-2 py-1">
+				<nav className="flex gap-4 text-lg">
+					{links.map(({ to, label }) => (
+						<Link key={to} to={to}>
+							{label}
+						</Link>
+					))}
+				</nav>
+				<div className="flex items-center gap-2">
+					<ModeToggle />
+					<UserMenu />
+				</div>
+			</div>
+			<hr />
+		</div>
+	);
 }

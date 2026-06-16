@@ -1,0 +1,18 @@
+{
+  "name": "@trade-pilot/llm",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    }
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.54.0",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "@trade-pilot/config": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
+  }
+}
