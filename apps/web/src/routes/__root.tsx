@@ -4,11 +4,12 @@ import {
 	createRootRouteWithContext,
 	HeadContent,
 	Outlet,
+	useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { Toaster } from "@trade-pilot/ui/components/sonner";
 
-import Header from "@/components/header";
+import Sidebar from "@/components/sidebar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { trpc } from "@/utils/trpc";
 
@@ -41,6 +42,9 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
 });
 
 function RootComponent() {
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	const showSidebar = pathname !== "/login";
+
 	return (
 		<>
 			<HeadContent />
@@ -50,9 +54,11 @@ function RootComponent() {
 				disableTransitionOnChange
 				storageKey="vite-ui-theme"
 			>
-				<div className="grid h-svh grid-rows-[auto_1fr]">
-					<Header />
-					<Outlet />
+				<div className="flex h-svh overflow-hidden bg-[#0b1326]">
+					{showSidebar && <Sidebar />}
+					<main className="flex-1">
+						<Outlet />
+					</main>
 				</div>
 				<Toaster richColors />
 			</ThemeProvider>
